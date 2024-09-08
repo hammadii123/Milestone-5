@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Form for user input -->
+    <div class="form-container">
+        <div class="titleParent">
+            <h2>Fill out your information</h2>
+        </div>
+
+        <div class="title">
+            <h3>Milestone 4: Editable Resume</h3>
+        </div>
+
+
+        <div class="mainn">
+            <form id="resumeForm" class="resumeForm" id="form-container">
+                <div class="personalInfo">
+                    <h3>Personal Information</h3>
+                </div>
+
+
+                <div class="inputFields">
+                    <div class="col1">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="number" id="age" placeholder="Your Age" required>
+                    </div>
+                    <div class="col2">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="text" id="phone" placeholder="Your Phone" required>
+                    </div>
+                </div>
+
+                <div class="headings">
+                    <h3>Skills</h3>
+                </div>
+                <input type="text" id="skills" placeholder="Skills (comma separated)" required>
+
+
+
+                <div class="headings">
+                    <h3>Education</h3>
+                </div>
+
+                <input type="text" id="education1" placeholder="Education 1" required>
+                <input type="text" id="institute1" placeholder="Institute 1" required>
+                <input type="text" id="education2" placeholder="Education 2">
+                <input type="text" id="institute2" placeholder="Institute 2">
+
+
+
+                <div class="headings">
+                    <h3>Work Experience</h3>
+                </div>
+                <input type="text" id="company1" placeholder="Company 1" required>
+                <input type="text" id="position1" placeholder="Position" required>
+                <input type="text" id="duration1" placeholder="Duration" required>
+                <textarea id="responsibilities1" placeholder="Responsibilities (comma separated)" required></textarea>
+
+                <input type="text" id="company2" placeholder="Company 2">
+                <input type="text" id="position2" placeholder="Position">
+                <input type="text" id="duration2" placeholder="Duration">
+                <textarea id="responsibilities2" placeholder="Responsibilities (comma separated)"></textarea>
+                <!-- Image Upload Field -->
+                <label class="image" for="profileImage">Upload Your Picture:</label>
+                <input type="file" id="profileImage" accept="image/*" />
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Existing Resume Structure -->
+    <div class="container" id="resume">
+        <div class="header">
+            <div class="img-area">
+                <img id="resume-image" src="./assets/image.jpg" alt="">
+            </div>
+            <h1 id="display-name">Hammad Mustafa</h1>
+            <h3 id="display-title">Mern Stack Web Developer</h3>
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong> <span id="display-name-info">Hammad Mustafa</span></p>
+                <p><strong>Age:</strong> <span id="display-age">20</span></p>
+                <p><strong>Email:</strong> <span id="display-email" class="email">hammadworks123@gmail.com</span></p>
+                <p><strong>Phone:</strong> <span id="display-phone">0334-0000000</span></p>
+                <br>
+
+                <hr>
+                <h2>Skills</h2>
+                <ul id="display-skills">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>SQL</li>
+                </ul>
+                <br>
+
+                <hr>
+                <h2>Education</h2>
+                <h3 id="display-education1">Software Engineering</h3>
+                <p id="display-institute1">Sir Syed University Of Engineering And Technology</p> <br>
+                <h3 id="display-education2">Inter in Pre-Engineering</h3>
+                <p id="display-institute2">DJ Science College , Karachi</p>
+            </div>
+
+
+
+            <hr class="separator">
+            <div class="right">
+                <h2>Work Experience</h2>
+                <h3 id="display-company1">CodSoft</h3>
+                <p><strong>Position:</strong> <span id="display-position1">Software Developer</span></p>
+                <p><strong>Duration:</strong> <span id="display-duration1">2021-2022</span></p>
+                <ul id="display-responsibilities1">
+                    <li>Built a student Grading Calculator using Oops Concepts</li>
+                    <li>Built the logic for Guuessing the numbers.</li>
+                    <li>Built an ATM interface System.
+                        Built a Quiz game</li>
+                </ul> <br>
+                <hr>
+                <br>
+                <h3 id="display-company2">Governor House Karachi</h3>
+                <p><strong>Position:</strong> <span id="display-position2">Senior Student</span></p>
+                <p><strong>Duration:</strong> <span id="display-duration2">2023-2024</span></p>
+                <ul id="display-responsibilities2">
+                    <li>Helped students in their queries</li>
+                    <li>Built Projects like : Todo List, Currency convertor etc.</li>
+                </ul>
+                <!-- Fix the onclick handler -->
+                <button id="downloadBtn" onclick="cvprint()">Download Resume as PDF</button>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #363636;
+}
+
+.container {
+    background: #f8f8f8;
+    max-width: 800px;
+    margin: 60px auto;
+    height: 1250px;
+    padding: 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.img-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+    border: 15px groove #dc2f2f;
+}
+
+.img-area img {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 1;
+    padding: 30px;
+}
+
+.left p {
+    line-height: 2;
+}
+
+.left ul li {
+    line-height: 2;
+}
+
+h2 {
+    background: #cc6430;
+    padding: 15px;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 0 50px 50px 0;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+}
+
+.right h3 {
+    margin-bottom: 15px;
+}
+
+.right p {
+    line-height: 2.9;
+}
+
+.right ul li {
+    line-height: 2;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+.image{
+    color: white;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* Form Editing*/
+
+
+.form-container {
+    h2 {
+        text-align: center;
+    }
+}
+
+.title{
+    h3{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    }
+}
+
+.mainn {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    width: max-content;
+    gap: 9px;
+    width: 100%;
+
+    .resumeForm {
+        display: flex !important;
+        flex-direction: column !important;
+        width: auto !important;
+        gap: 9px;
+        width: 800px !important;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        background-color: #3e4a61;
+        background-color: #3e4a61;
+        border-radius: 20px;
+        padding: 50px;
+
+
+        .inputFields {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col1,
+        .col2 {
+            input {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                width: 300px;
+            }
+        }
+    }
+
+    .personalInfo {
+        text-align: center;
+
+        h3 {
+            color: white;
+            font-weight: 700;
+
+        }
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        width: 600px;
+    }
+
+    textarea {
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        width: 550px;
+
+    }
+}
+
+.headings {
+    text-align: center;
+
+    h3 {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+button {
+    background: #cc6430;
+    padding: 5px;
+    width: 200px;
+    /* padding: 5px; */
+    border-radius: 6px;
+    height: 50px;
+    color: white;
+    font-weight: 500;
+    font-size: medium;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+
+    // For Cv
+    h2 {
+        text-align: center;
+    }
+
+    .email {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+
+
+    // For Form
+    .mainn {
+        width: 100%;
+
+
+        .resumeForm {
+            width: 100% !important;
+
+            .inputFields {
+                width: 100%;
+
+                .col1,
+                .col2 {
+                    width: 100%;
+
+                    input,
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    input {
+        width: 100% !important;
+    }
+
+    textarea {
+        width: 100% !important;
+    }
+
+
+}
+
+
+
+@media (max-width: 800px) {
+
+    .mainn {
+        width: 100%;
+
+
+        .resumeForm {
+            width: 100% !important;
+
+            .inputFields {
+                width: 100%;
+
+                .col1,
+                .col2 {
+                    width: 100%;
+
+                    input,
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    input {
+        width: 100% !important;
+    }
+
+    textarea {
+        width: 100% !important;
+    }
+
+
+}
